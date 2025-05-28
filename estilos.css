@@ -1,16 +1,44 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: #fbeaff;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  padding: 0;
+  background: #fff0f5;
+  color: #333;
   text-align: center;
+  animation: fadein 2s ease;
 }
 
-header {
-  background: #c2185b;
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header.hero {
+  background: linear-gradient(to right, #c2185b, #ba68c8);
+  padding: 40px 20px;
   color: white;
-  padding: 30px 10px;
+  animation: slidein 1.5s ease;
+}
+
+@keyframes slidein {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 15px;
+  border-radius: 100%;
+  box-shadow: 0 0 15px #fff;
+}
+
+h1 {
+  font-size: 2.8em;
+  margin: 10px 0;
+}
+
+.tagline {
+  font-size: 1.1em;
+  letter-spacing: 1px;
 }
 
 main {
@@ -18,22 +46,51 @@ main {
 }
 
 section {
-  margin-bottom: 30px;
-  padding: 10px 20px;
-  border-left: 5px solid #8e24aa;
+  margin: 40px 0;
+  padding: 20px;
+  background: #fce4ec;
+  border-left: 5px solid #9c27b0;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mision-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.mision-vision div {
+  flex: 1 1 45%;
   background: #f3e5f5;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 ul {
   text-align: left;
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.6;
+}
+
+.redes img {
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
 }
 
 footer {
   background: #ba68c8;
   color: white;
-  padding: 15px;
+  padding: 20px;
   font-size: 0.9em;
+  margin-top: 40px;
 }
